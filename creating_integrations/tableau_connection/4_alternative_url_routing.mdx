@@ -1,0 +1,30 @@
+# Alternative URL Routing
+
+Curator connects to Tableau Server to verify a user's access and permissions.
+
+Sometimes, Tableau Server is configured to live behind a "Reverse Proxy".
+There are many reasons why this configuration may be preferable.
+
+Often, though, Reverse Proxy setups with Tableau are misconfigured.
+This can lead to trusted ticket whitelisting issues.
+
+Since the Tableau Server whitelisting for issuing a trusted ticket is based on an IP address, when proxies are
+misconfigured, Tableau Server sees the proxy/load balancer, instead of Curator and rejects the ticket request.
+
+Tableau Server requires
+[tsm configuration options, gateway whitelisting and several headers](https://help.tableau.com/current/server/en-us/proxy.htm#configure-the-reverse-proxy-server)
+for these API calls to work correctly.
+
+## Working Around Reverse Proxy Setups
+
+Usually, instead of fixing Tableau Server Reverse Proxy setups, routing Curator around them is quicker and easier.
+
+Of course, end users should continue to be routed over the reverse proxy/load balancer.
+
+**To configure alternative routing:**
+
+- Go to **Integrations** > **Connections** and click on your Tableau Server connection.
+- Place the *internal route* to Tableau Server in *Tableau Server URL*.
+- Place the user-facing route to Tableau Server in *Alternate Tableau Server URL*.
+
+![Reverse Proxy Alt URL](https://curator.interworks.com/file/reverseproxyalturl)

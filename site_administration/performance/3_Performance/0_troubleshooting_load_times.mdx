@@ -1,0 +1,31 @@
+# Troubleshooting Load Times
+
+When determining the root-cause of latency issues on Curator, using the debug mode for Curator is the fastest
+way to rule out a number of issues that may be causing slow loading times.  This can come from the location
+of your servers and/or networking issues, custom code, internal Curator issues or slow Dashboard load times.
+Curator's debug mode provides the Curator team with enough information to know where to start looking when
+addressing these issues.  Follow the steps below to view Curator's debug data, and download the debug file
+and send it to the Curator support team if you have any concerns.
+
+## Enabling Debug Mode
+
+1. Login to the backend of your Curator instance (e.g. `http://curatorexample.com/backend`).
+2. Navigate to the **Settings** > **Curator** > **Portal Settings** section from the left-hand menu.
+3. Click on the "General" tab at the top of the main page content.
+4. In the "Debug" section, turn ON *Enable Frontend Debug* and click the "Save" button.
+
+## Using the Debug Mode
+
+1. Append `?debug=1` to the end of any url (unless there is already a `?` in the url, in which case append `&debug=1`)*
+2. Click the arrow on the bottom tray to expand the debug menu, then navigate between the tabs to view the debug output.
+*NOTE: If you are debugging slow login times, be sure to logout first, and then add the debug parameter to
+your URL (e.g. `http://curatorexample.com/backend`?debug=1)
+
+## Capturing Debugging Results
+
+1. Once you have followed the **Using the debug mode** steps above, you can download the results of your
+debugging session using the export button on the debugging tray:
+
+    ![debug export](https://curator.interworks.com/file/screenshot-2023-03-23-at-32353-pm)
+
+2. This will output a `.iw` file which you can send to Curator support for assistance with slow load times.

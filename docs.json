@@ -1,0 +1,580 @@
+{
+    "$schema": "https://mintlify.com/docs.json",
+    "theme": "mint",
+    "name": "Curator by InterWorks Documentation",
+    "description": "Curator by InterWorks is a powerful platform for embedding and managing analytics content from various sources like Sigma, Tableau, Power BI, and ThoughtSpot. This documentation provides comprehensive guides on setup, integration, and usage.",
+    "colors": {
+        "primary": "#6633ff",
+        "light": "#6633ff",
+        "dark": "#6633ff"
+    },
+    "logo": {
+        "light": "/docs_assets/curator-logo-black-no-text.svg",
+        "dark": "/docs_assets/curator-by-iw-logo-white.svg"
+    },
+    "favicon": "/docs_assets/favicon.png",
+    "navbar": {
+        "links": [
+            {
+                "label": "Marketing Site",
+                "href": "https://curator.interworks.com"
+            }
+        ],
+        "primary": {
+            "type": "button",
+            "label": "Support",
+            "href": "https://interworks.com/help"
+        }
+    },
+    "navigation": {
+        "tabs": [
+            {
+                "tab": "Documentation",
+                "groups": [
+                    {
+                        "group": "Setup",
+                        "pages": [
+                            {
+                                "group": "Installation",
+                                "pages": [
+                                    "setup/installation/linux_installation",
+                                    "setup/installation/windows_installation",
+                                    "setup/installation/iis_installation"
+                                ]
+                            },
+                            {
+                                "group": "Authentication",
+                                "pages": [
+                                    "setup/authentication/overview",
+                                    "setup/authentication/pass_through_authentication",
+                                    {
+                                        "group": "SAML",
+                                        "pages": [
+                                            "setup/authentication/okta_saml",
+                                            "setup/authentication/onelogin_saml",
+                                            "setup/authentication/azure_ad_saml",
+                                            "setup/authentication/signing_saml_login_requests"
+                                        ]
+                                    },
+                                    "setup/authentication/curator_users",
+                                    "setup/authentication/onelogin_oidc",
+                                    "setup/authentication/multifactor_authentication",
+                                    "setup/authentication/active_directory",
+                                    "setup/authentication/windows_ldap_iis"
+                                ]
+                            },
+                            {
+                                "group": "SSL",
+                                "pages": [
+                                    "setup/ssl/0_windows_ssl_iis_-_deprecated",
+                                    "setup/ssl/1_force_ssl",
+                                    "setup/ssl/3_windows_ssl",
+                                    "setup/ssl/2_linux_ssl",
+                                    "setup/ssl/4_basic_http_authentication"
+                                ]
+                            },
+                            {
+                                "group": "High Availability",
+                                "pages": [
+                                    "setup/high_availability/0_high_availability"
+                                ]
+                            },
+                            {
+                                "group": "Central Dispatch",
+                                "pages": [
+                                    "setup/central_dispatch/1_linux_central_dispatch",
+                                    "setup/central_dispatch/0_windows_central_dispatch"
+                                ]
+                            },
+                            {
+                                "group": "Proxy Configuration",
+                                "pages": [
+                                    "setup/proxy_configuration/1_reverse_proxy",
+                                    "setup/proxy_configuration/0_forward_proxy"
+                                ]
+                            },
+                            {
+                                "group": "Trial Quick Start Guide",
+                                "pages": [
+                                    "setup/trial_quick_start_guide/3_creating_your_first_page",
+                                    "setup/trial_quick_start_guide/1_setting_up_your_portal",
+                                    "setup/trial_quick_start_guide/0_getting_started",
+                                    "setup/trial_quick_start_guide/2_adding_your_first_dashboard"
+                                ]
+                            },
+                            {
+                                "group": "Email",
+                                "pages": [
+                                    "setup/email/0_email_configuration"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "group": "Creating Integrations",
+                        "pages": [
+                            "creating_integrations/overview",
+                            {
+                                "group": "thoughtspot connection",
+                                "pages": [
+                                    "creating_integrations/thoughtspot_connection/0_integrating_thoughtspot_with_curator"
+                                ]
+                            },
+                            {
+                                "group": "updating connections",
+                                "pages": [
+                                    "creating_integrations/updating_connections/1_temporarily_disabling_connections",
+                                    "creating_integrations/updating_connections/0_replace_dashboard_urls"
+                                ]
+                            },
+                            {
+                                "group": "power bi connection",
+                                "pages": [
+                                    "creating_integrations/power_bi_connection/1_service_principal_setup",
+                                    "creating_integrations/power_bi_connection/4_troubleshooting_power_bi_access",
+                                    "creating_integrations/power_bi_connection/0_azure_app_setup",
+                                    "creating_integrations/power_bi_connection/2_power_bi_workspace_access",
+                                    "creating_integrations/power_bi_connection/3_curator_connection"
+                                ]
+                            },
+                            {
+                                "group": "tableau connection",
+                                "pages": [
+                                    "creating_integrations/tableau_connection/5_tableau_server_repository",
+                                    "creating_integrations/tableau_connection/1_tableau_cloud_setup",
+                                    "creating_integrations/tableau_connection/4_alternative_url_routing",
+                                    "creating_integrations/tableau_connection/0_creating_a_connection",
+                                    "creating_integrations/tableau_connection/2_embed_authentication",
+                                    "creating_integrations/tableau_connection/3_trusted_authentication_deprecated",
+                                    "creating_integrations/tableau_connection/6_tableau_connection_troubleshooting"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "group": "Embedding & Using Analytics",
+                        "pages": [
+                            {
+                                "group": "tableau dashboards",
+                                "pages": [
+                                    "embedding_using_analytics/tableau_dashboards/4_email_subscriptions",
+                                    "embedding_using_analytics/tableau_dashboards/0_adding_a_dashboard",
+                                    "embedding_using_analytics/tableau_dashboards/7_pause_and_resume_changes",
+                                    "embedding_using_analytics/tableau_dashboards/1_generating_titles",
+                                    "embedding_using_analytics/tableau_dashboards/3_custom_views",
+                                    "embedding_using_analytics/tableau_dashboards/8_url_action_overrides_link_target",
+                                    "embedding_using_analytics/tableau_dashboards/9_dashboard_settings",
+                                    "embedding_using_analytics/tableau_dashboards/6_download_workbook",
+                                    "embedding_using_analytics/tableau_dashboards/5_share_workbook",
+                                    "embedding_using_analytics/tableau_dashboards/10_tableau_worksheets_and_stories",
+                                    "embedding_using_analytics/tableau_dashboards/2_data_export"
+                                ]
+                            },
+                            {
+                                "group": "filters parameters",
+                                "pages": [
+                                    "embedding_using_analytics/filters_parameters/3_hidden_sticky_filters_and_parameters",
+                                    "embedding_using_analytics/filters_parameters/5_filter_categories",
+                                    "embedding_using_analytics/filters_parameters/2_parameters",
+                                    "embedding_using_analytics/filters_parameters/4_filter_apply_button",
+                                    "embedding_using_analytics/filters_parameters/7_preloading_filters_and_parameters",
+                                    "embedding_using_analytics/filters_parameters/1_filters",
+                                    "embedding_using_analytics/filters_parameters/0_specify_filter_sheet",
+                                    "embedding_using_analytics/filters_parameters/6_caching_filter_and_parameter_options"
+                                ]
+                            },
+                            {
+                                "group": "report builder",
+                                "pages": [
+                                    "embedding_using_analytics/report_builder/0_overview_and_enabling_report_builder",
+                                    "embedding_using_analytics/report_builder/4_watermark_text",
+                                    "embedding_using_analytics/report_builder/1_email_option",
+                                    "embedding_using_analytics/report_builder/5_powerpoint",
+                                    "embedding_using_analytics/report_builder/2_scheduled_reports",
+                                    "embedding_using_analytics/report_builder/3_fallback_image"
+                                ]
+                            },
+                            {
+                                "group": "data manager",
+                                "pages": [
+                                    "embedding_using_analytics/data_manager/2_data_manager_basics",
+                                    "embedding_using_analytics/data_manager/10_sending_data_to_webhooks",
+                                    "embedding_using_analytics/data_manager/11_web_data_connector_wdc",
+                                    "embedding_using_analytics/data_manager/5_user_commenting",
+                                    "embedding_using_analytics/data_manager/0_updating_data_groups",
+                                    "embedding_using_analytics/data_manager/9_importing_data",
+                                    "embedding_using_analytics/data_manager/8_dashboard_feedback",
+                                    "embedding_using_analytics/data_manager/3_creating_a_form",
+                                    "embedding_using_analytics/data_manager/7_mark_commenting",
+                                    "embedding_using_analytics/data_manager/1_exporting_data",
+                                    "embedding_using_analytics/data_manager/4_connecting_to_data_manager",
+                                    "embedding_using_analytics/data_manager/6_field_calculations"
+                                ]
+                            },
+                            {
+                                "group": "tableau metric",
+                                "pages": [
+                                    "embedding_using_analytics/tableau_metric/0_adding_a_pulse_metric"
+                                ]
+                            },
+                            {
+                                "group": "thoughtspot content",
+                                "pages": [
+                                    "embedding_using_analytics/thoughtspot_content/0_thoughtspot_search"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "group": "Site Content & Design",
+                        "pages": [
+                            {
+                                "group": "loading screens",
+                                "pages": [
+                                    "site_content_design/loading_screens/0_loading_screens"
+                                ]
+                            },
+                            {
+                                "group": "content discovery",
+                                "pages": [
+                                    "site_content_design/content_discovery/2_keywords",
+                                    "site_content_design/content_discovery/4_featuring_content",
+                                    "site_content_design/content_discovery/1_search",
+                                    "site_content_design/content_discovery/0_hidden_content",
+                                    "site_content_design/content_discovery/3_favorites",
+                                    "site_content_design/content_discovery/5_thumbnail_preview_images"
+                                ]
+                            },
+                            {
+                                "group": "user notifications and email",
+                                "pages": [
+                                    "site_content_design/user_notifications_and_email/1_tutorials",
+                                    "site_content_design/user_notifications_and_email/0_error_pages",
+                                    "site_content_design/user_notifications_and_email/2_notices",
+                                    "site_content_design/user_notifications_and_email/3_email_formatting"
+                                ]
+                            },
+                            {
+                                "group": "theme",
+                                "pages": [
+                                    "site_content_design/theme/3_group_overrides",
+                                    "site_content_design/theme/2_titles_and_toolbars",
+                                    "site_content_design/theme/1_homepage",
+                                    "site_content_design/theme/4_page_meta_titles_seo",
+                                    "site_content_design/theme/0_curator_styles"
+                                ]
+                            },
+                            {
+                                "group": "menus",
+                                "pages": [
+                                    "site_content_design/menus/4_site_switcher",
+                                    "site_content_design/menus/0_managing_menus",
+                                    "site_content_design/menus/1_menu_items",
+                                    "site_content_design/menus/2_restrict_access",
+                                    "site_content_design/menus/3_tagged_workbooks"
+                                ]
+                            },
+                            {
+                                "group": "files",
+                                "pages": [
+                                    "site_content_design/files/0_files"
+                                ]
+                            },
+                            {
+                                "group": "org chart",
+                                "pages": [
+                                    "site_content_design/org_chart/0_org_chart"
+                                ]
+                            },
+                            {
+                                "group": "pages",
+                                "pages": [
+                                    "site_content_design/pages/0_pages_overview",
+                                    "site_content_design/pages/8_box_embedding",
+                                    "site_content_design/pages/10_looker_embedding",
+                                    "site_content_design/pages/4_blogs",
+                                    "site_content_design/pages/11_page_variables",
+                                    "site_content_design/pages/6_manual_embed_-_iframes",
+                                    "site_content_design/pages/9_youtube_embedding",
+                                    "site_content_design/pages/3_forms",
+                                    "site_content_design/pages/2_explorer",
+                                    "site_content_design/pages/5_user_customized_metrics",
+                                    "site_content_design/pages/7_ssrs_embedding",
+                                    "site_content_design/pages/1_tiles"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "group": "Upgrading & Migration",
+                        "pages": [
+                            {
+                                "group": "upgrading",
+                                "pages": [
+                                    "upgrading_migration/upgrading/1_disable_curator_upgrades",
+                                    "upgrading_migration/upgrading/3_dependency_updates",
+                                    "upgrading_migration/upgrading/0_system_upgrade",
+                                    "upgrading_migration/upgrading/4_troubleshooting_upgrades",
+                                    "upgrading_migration/upgrading/2_offline_upgrades_air_gapped"
+                                ]
+                            },
+                            {
+                                "group": "migration",
+                                "pages": [
+                                    "upgrading_migration/migration/0_importing_and_exporting"
+                                ]
+                            },
+                            {
+                                "group": "backups",
+                                "pages": [
+                                    "upgrading_migration/backups/2_manual_restoration_of_curator_backup",
+                                    "upgrading_migration/backups/1_taking_a_manual_full_backup",
+                                    "upgrading_migration/backups/0_curator_backup"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "group": "Server Management",
+                        "pages": [
+                            {
+                                "group": "architecture",
+                                "pages": [
+                                    "server_management/architecture/0_api_connections_overview"
+                                ]
+                            },
+                            {
+                                "group": "system administration",
+                                "pages": [
+                                    "server_management/system_administration/2_filesystem_permissions",
+                                    "server_management/system_administration/0_disk_speed_metrics",
+                                    "server_management/system_administration/3_updating_curator_logging",
+                                    "server_management/system_administration/1_server_hardening_procedures",
+                                    "server_management/system_administration/4_linux_-_cron_troubleshooting"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "group": "Best Practices",
+                        "pages": [
+                            {
+                                "group": "security",
+                                "pages": [
+                                    "best_practices/security/0_password_settings"
+                                ]
+                            },
+                            {
+                                "group": "performance",
+                                "pages": [
+                                    {
+                                        "group": "performance",
+                                        "pages": [
+                                            "best_practices/performance/0_Performance/0_menu_tuning",
+                                            "best_practices/performance/0_Performance/1_cache_warming"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "group": "site administration",
+                        "pages": [
+                            {
+                                "group": "admin email notifications",
+                                "pages": [
+                                    {
+                                        "group": "admin email notifications",
+                                        "pages": [
+                                            "site_administration/admin_email_notifications/2_Admin Email Notifications/0_system_notifications",
+                                            "site_administration/admin_email_notifications/2_Admin Email Notifications/1_data_manager_notifications"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "group": "license key",
+                                "pages": [
+                                    {
+                                        "group": "license key",
+                                        "pages": [
+                                            "site_administration/license_key/4_License Key/0_updating_license_key"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "group": "user notifications",
+                                "pages": [
+                                    {
+                                        "group": "user notifications",
+                                        "pages": [
+                                            "site_administration/user_notifications/0_User Notifications/0_third_party_cookies"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "group": "backend administrators",
+                                "pages": [
+                                    {
+                                        "group": "backend administrators",
+                                        "pages": [
+                                            "site_administration/backend_administrators/1_Backend Administrators/1_password_reset",
+                                            "site_administration/backend_administrators/1_Backend Administrators/0_overview"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "group": "performance",
+                                "pages": [
+                                    {
+                                        "group": "performance",
+                                        "pages": [
+                                            "site_administration/performance/3_Performance/0_troubleshooting_load_times",
+                                            "site_administration/performance/3_Performance/1_cache_warming"
+                                        ]
+                                    },
+                                    {
+                                        "group": "performance",
+                                        "pages": [
+                                            "site_administration/performance/6_Performance/0_troubleshooting_load_times",
+                                            "site_administration/performance/6_Performance/1_cache_warming"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "group": "standards compliance",
+                                "pages": [
+                                    {
+                                        "group": "standards compliance",
+                                        "pages": [
+                                            "site_administration/standards_compliance/5_Standards Compliance/0_web_accessibility"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "group": "users groups",
+                        "pages": [
+                            {
+                                "group": "user security",
+                                "pages": [
+                                    "users_groups/user_security/1_password_change",
+                                    "users_groups/user_security/5_user_throttling",
+                                    "users_groups/user_security/4_disabling_link-preview_security",
+                                    "users_groups/user_security/2_password_reset",
+                                    "users_groups/user_security/0_frontend_user_permissions",
+                                    "users_groups/user_security/3_password_expiration_and_complexity"
+                                ]
+                            },
+                            {
+                                "group": "user management",
+                                "pages": [
+                                    "users_groups/user_management/2_reset_user's_password",
+                                    "users_groups/user_management/1_user_sync_and_membership_sync_overview",
+                                    "users_groups/user_management/4_automatic_license_provisioning",
+                                    "users_groups/user_management/6_username_mapping",
+                                    "users_groups/user_management/7_custom_attributes",
+                                    "users_groups/user_management/0_users_and_groups_overview",
+                                    "users_groups/user_management/5_just-in-time_jit_provisioning",
+                                    "users_groups/user_management/3_frontend_users"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "group": "tutorials",
+                        "pages": [
+                            {
+                                "group": "none",
+                                "pages": [
+                                    "tutorials/none/0_frontend_quick_start_-_homepage",
+                                    "tutorials/none/3_backend_quick_start_-_adding_content",
+                                    "tutorials/none/5_backend_quick_start_-_adding_content_filters,_parameters,_tutorials_loading_screens",
+                                    "tutorials/none/4_backend_quick_start_-_adding_content_menu_and_navigation",
+                                    "tutorials/none/1_frontend_quick_start_-_dashboard",
+                                    "tutorials/none/6_get_started_with_curator_in_5_minutes",
+                                    "tutorials/none/2_backend_quick_start_-_styling"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "group": "assets",
+                        "pages": [
+                            {
+                                "group": "none",
+                                "pages": [
+                                    "assets/none/0_windows_installer",
+                                    "assets/none/3_api_example_-_creating_a_file_python",
+                                    "assets/none/4_sample_hero_images_jpgs",
+                                    "assets/none/2_dockerfile",
+                                    "assets/none/5_logging.php_file",
+                                    "assets/none/1_htaccess_file"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "tab": "API",
+                "groups": [
+                    {
+                        "group": "curator api",
+                        "pages": [
+                            {
+                                "group": "api docs",
+                                "pages": [
+                                    "curator_api/api_docs/3_content",
+                                    "curator_api/api_docs/5_authentication",
+                                    "curator_api/api_docs/2_tableau_api",
+                                    "curator_api/api_docs/0_integration",
+                                    "curator_api/api_docs/1_curator_api",
+                                    "curator_api/api_docs/4_user_api"
+                                ]
+                            },
+                            {
+                                "group": "custom integration",
+                                "pages": [
+                                    "curator_api/custom_integration/1_commands",
+                                    "curator_api/custom_integration/0_scripts",
+                                    "curator_api/custom_integration/2_subscription_routing"
+                                ]
+                            },
+                            {
+                                "group": "getting started",
+                                "pages": [
+                                    "curator_api/getting_started/1_curator_integration_overview",
+                                    "curator_api/getting_started/0_curator_api_overview"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "global": {
+            "anchors": [
+                {
+                    "anchor": "Blog",
+                    "href": "https://curator.interworks.com/blog",
+                    "icon": "newspaper"
+                }
+            ]
+        }
+    },
+    "footer": {
+        "socials": {
+            "x": "https://x.com/interworks",
+            "github": "https://github.com/interworks",
+            "linkedin": "https://www.linkedin.com/company/interworks/"
+        }
+    }
+}

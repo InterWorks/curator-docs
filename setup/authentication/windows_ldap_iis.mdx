@@ -1,0 +1,42 @@
+---
+title: 'Windows LDAP (Unavailable)'
+description: 'A guide to setting up Windows LDAP authentication for Curator using IIS.'
+---
+
+**Curator no longer supports IIS on new installations.**
+
+**Only use the information below on existing installs.  It is *highly* recommended that you reinstall with Apache for
+stability, please see our
+[Windows Apache Installation](https://curator.interworks.com/page/kb/setupinstallation/windows/1108)
+documentation for steps on how to achieve the best Curator experience for Windows.**
+
+## LEGACY SYSTEMS ONLY
+
+For current information on how to set up Active Directory on Windows, please see our
+[Active Directory](https://curator.interworks.com/kb/setup/authentication/active-directory/1144) documentation.
+
+Using IIS, you can use the user's AD credentials automatically.
+
+Enable Windows Authentication in "Add/Remove Windows Features". (Sometimes this is known as Add Roles and Features)
+Server Roles > Web Server (IIS) > Web Server > Security > Window Authentication.
+*Note: This may be found in the Server Manager, not IIS*
+
+Once this is added, go to your site in IIS, click "Authentication". Change "Windows Authentication" to "Enabled" and
+"Anonymous Authentication" to "Disabled".
+
+![Authentication settings](https://curator.interworks.com/file/IIS_LDAP_Pass_auth.png)
+
+Go to the site in the IIS Manager and open the Configuration Editor
+
+![Configuration editor](https://curator.interworks.com/file/IIS_LDAP_Pass_manager.png)
+
+Choose "system.webServer/serverRuntime" for the Section selection. Select UseWorkerProcessUser. Click Apply.
+
+![Configuration editor settings](https://curator.interworks.com/file/IIS_LDAP_Pass_configure.png)
+
+In Curator's Tableau Server Settings, select "Active Directory" as the Authentication Type.
+
+![Portal settings](https://curator.interworks.com/file/IIS_LDAP_Pass_portal_settings.png)
+
+If you have issues, make sure to disable UAC, to allow access to the filesystem.  You can find this setting under
+Control Panel > System and Security > User Account Control Settings.
