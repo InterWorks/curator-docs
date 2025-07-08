@@ -1,6 +1,6 @@
-# Menu Tuning
+# Menu Tuningz
 
-## Menu Overview
+## Menu Overviewz
 
 While Curator’s menu system is about as streamlined as possible, there are some tips and tricks you can use to tune its
 performance if fancy yourself as a Vin Diesel type. Most of the delays Curator clients see when rendering their
@@ -11,7 +11,7 @@ issue when users first log in to Curator for the day. However, that’s also the
 Curator portal, so it’s understandable that this should be as fast as possible. With a little thought, this is where
 performance gains can be realized.
 
-## The Obvious Stuff
+## The Obvious Stuffz
 
 The first thing to check is always that Curator and any platforms it is connected to are running at full speed. If your
 Tableau Server is underpowered or is being bombarded by users, that will slow down the permission checks Curator needs
@@ -85,13 +85,13 @@ cached, so Curator can build the navigation fast and furious.
 
 Curator’s API end point can be found at /api/v1/Content/generateNavMenus. You’ll need to pass it a valid API key, the ID
 of the menu to generate, and the username to generate it for. Documentation on how to call this API endpoint can be
-found by navigating to Backend >Settings >Curator >API Keys, click on one of the keys, and change the drop-downs at the
+found by navigating to Backend \>Settings \>Curator \>API Keys, click on one of the keys, and change the drop-downs at the
 bottom to “Content” and “generateNavMenus,” respectively.
 
 If you don’t have a good way to schedule API calls, you can take advantage of Curator’s automation scripts. This feature
-is disabled by default, so to enable it navigate to Backend >Settings >Curator >Portal Settings >Features tab >
-Functionality Section >Integration Automation switch and save. Once enabled, refresh the page and you should see a new
-section under Backend >Integrations >Automation to create scripts or commands. This is an advanced topic, so we’ll leave
+is disabled by default, so to enable it navigate to Backend \>Settings \>Curator \>Portal Settings \>Features tab \>
+Functionality Section \>Integration Automation switch and save. Once enabled, refresh the page and you should see a new
+section under Backend \>Integrations \>Automation to create scripts or commands. This is an advanced topic, so we’ll leave
 the rest up to you to implement, but if you want to create a script to call the API you’ll use Manage Scripts. If you
 want to issue commands on Curator’s server to call the API, you’ll use Manage Commands. Both can be configured for
 whatever schedule makes sense in your environment.
