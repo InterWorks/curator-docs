@@ -1,6 +1,7 @@
 ---
-title: 'Linux Installation'
-description: 'Instructions for installing Curator on Linux.'
+title: "Linux Installation"
+description: "Instructions for installing Curator on Linux."
+mode: "wide"
 ---
 
 import BrowserInstallStepsSnippet from '/snippets/browser_install_steps.mdx';
@@ -10,22 +11,22 @@ commands specific to your IT infrastructure.
 
 This installer works with the following distributions:
 
-* Ubuntu 20.04, 22.04, or 24.04 (Recommended)
-* CentOS 8
-* RedHat 8
-* Amazon Linux AMI 2
+- Ubuntu 20.04, 22.04, or 24.04 (Recommended)
+- CentOS 8
+- RedHat 8
+- Amazon Linux AMI 2
 
 ## Installation Script
 
 1. SSH into your web server, ensure you're using a user that has full sudo access, and run the command below:
 
-    ```bash Install Command
-    curl -s -o curator.sh https://api.curator.interworks.com/scripts/linux_install.sh && chmod +x ./curator.sh && ./curator.sh
-    ```
+   ```bash Install Command
+   curl -s -o curator.sh https://api.curator.interworks.com/scripts/linux_install.sh && chmod +x ./curator.sh && ./curator.sh
+   ```
 2. After you've run the command, a file with credentials will be generated at `/var/www/curator_info.txt` - make note of these credentials.
 3. Open `http://curatorexample.com/install.php` in a browser - replacing `curatorexample.com` with your site's URL.
-If you're on the server you installed, you may also use `localhost`.  Keep in mind this may be an IP address or computer
-name until your IT team sets up DNS.
+   If you're on the server you installed, you may also use `localhost`.  Keep in mind this may be an IP address or computer
+   name until your IT team sets up DNS.
 
 <BrowserInstallStepsSnippet />
 
@@ -33,26 +34,28 @@ name until your IT team sets up DNS.
 
 The install script can take optional parameters to specify values for the installation script. This can be helpful in
 distributed setups, or scripted installations.
-    ```bash
-    curl -o curator.sh https://api.curator.interworks.com/scripts/linux_install.sh
-    chmod +x ./curator.sh
-    ./curator.sh -f -h [database_host] -u [database_username] -p [database_password] -P [database_port] -d [database_name] -l [license_key] -s [persistent_storage_location] -v [curator_version]
-    ```
+
+```bash
+curl -o curator.sh https://api.curator.interworks.com/scripts/linux_install.sh
+chmod +x ./curator.sh
+./curator.sh -f -h [database_host] -u [database_username] -p [database_password] -P [database_port] -d [database_name] -l [license_key] -s [persistent_storage_location] -v [curator_version]
+```
 
 Arguments:
-    - `-h` The database hostname *Needed when using an external database host*
-    - `-u` The database username  *Default: `curator`*
-    - `-p` The database password *Default: auto-generated password.  Use this when you need to use a connection to a
-    database for a user that has already been created with a specific password.*
-    - `-P` The database port *Default: `3306`*
-    - `-d` The database name *Default: `curator`*
-    - `-l` The License Key for your Curator installation. When performing a full installation, this is required.
-    - `-s` Path to a persistent storage location *Container-based or distributed installations typically require this.*
-    - `-v` Sets the version of Curator to install. *Default: most recent version.*
+
+- `-h` The database hostname _Needed when using an external database host_
+- `-u` The database username  _`Default: curator`_
+- `-p` The database password _Default: auto-generated password.  Use this when you need to use a connection to a
+  database for a user that has already been created with a specific password._
+- `-P` The database port _`Default: 3306`_
+- `-d` The database name _`Default: curator`_
+- `-l` The License Key for your Curator installation. When performing a full installation, this is required.
+- `-s` Path to a persistent storage location _Container-based or distributed installations typically require this._
+- `-v` Sets the version of Curator to install. _Default: most recent version._
 
 Options:
 
-    - `-f` Full Installation, this flag is required in most custom setups to avoid the in-browser installer.
+- `-f` Full Installation, this flag is required in most custom setups to avoid the in-browser installer.
 
 ## Advanced Setup
 
@@ -63,4 +66,4 @@ contact or click the support link above to get in touch with us.
 ## AWS EC2 Process
 
 If you need help creating and connecting to an AWS EC2 instance from Windows using Putty, view this documentation:
-[https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html)
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html
