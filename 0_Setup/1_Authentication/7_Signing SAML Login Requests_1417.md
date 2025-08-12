@@ -1,0 +1,31 @@
+# Signing SAML Login Requests
+
+## Before We Begin
+
+This is an optional step in addition to configuring Curator for SAML authentication.  See these links for help
+configuring SAML within Curator first:
+
+* [Okta](https://curator.interworks.com/page/kb/setupauthentication/okta-saml/1121)
+* [OneLogin](https://curator.interworks.com/page/kb/setupauthentication/onelogin-saml/1122)
+* [AzureAD](https://curator.interworks.com/page/kb/setupauthentication/azure-ad-saml/1244)
+
+## Configuring Curator to Sign SAML Requests
+
+If your SAML Identity Provider (IdP) requires SAML requests to be signed, you'll also need to generate a certificate
+and private key, and add those to Curator's authentication settings.
+
+Here are the steps you'll need to take:
+
+1. Generate a certificate and private key.  If needed, you can create a self-signed key [here](https://www.samltool.com/self_signed_certs.php).
+2. Navigate to Curator's **Backend** > **Settings** > **Security** > **Authentication Settings** and expand the
+**SAML Advanced** section.
+3. Toggle on the **Sign Log In Requests** and **Sign Logout Requests** options.
+4. Open the certificate file on your computer, copy its contents, and paste them into the
+**Service Provider Certificate** field.
+5. Open the private key file on your computer, copy its contents, and paste them into the
+**Service Provider Private** Key field.
+6. Save the changes.
+7. You will likely need to send the certificate file to your SAML IdP administrator.
+8. If the **Certificate** field (the field above the **Service Provider Certificate**) is blank, you'll need to get an
+updated metadata file from your IdP administrator and import it using the button in the **General** section at the top
+of the page.

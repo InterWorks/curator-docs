@@ -1,0 +1,17 @@
+# Tableau Cloud Setup
+
+## 1. Server Setup
+
+Follow the steps in the
+[Tableau Connection Setup](https://curator.interworks.com/page/kb/setuptableau-connection/rest-api-integration/1089)
+section to get connected to your Tableau Server.
+
+## 2. Connected App Setup
+
+As of the `01-04-23` Curator release, Tableau's connected apps are now supported as a method of authentication.
+This means SSO is no longer required to support a seamless authentication experience for Tableau Cloud users.  All
+Tableau Cloud connections in Curator utilize connected apps.  Curator will create a connected app on your Tableau Cloud
+site if one doesn't already exist.  You may switch which connected app Curator uses if you need.
+
+For more information and a troubleshooting guide, refer to our article about
+ [Creating Integrations: Tableau Connection - Connected Apps](https://curator.interworks.com/page/kb/creating-integrations/tableau-connection/embed-authentication/3983)
