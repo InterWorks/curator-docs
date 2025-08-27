@@ -22,3 +22,28 @@ then load it again at a later date.
 of the title bar in the Dashboard.
 6. Enter a name for the new Custom View in the text box and click the "Create" button.
 7. To load a different Custom View, select an existing view from the drop-down and click on the "Apply" button.
+
+## Sharing Direct Links to Custom Views
+
+Custom Views can be shared via direct URL links, allowing users to access specific Custom Views without manually
+selecting them from the dropdown. This functionality works similar to Tableau's native Custom View sharing capabilities.
+
+### How to share a Custom View via direct link
+
+1. **Apply the desired Custom View** using the steps above (steps 1-7).
+2. **Copy the current URL** from your browser's address bar. The URL will automatically include the Custom View parameter.
+3. **Share the URL** with other users who have access to the Dashboard.
+
+### URL Parameter Format
+
+Custom Views are accessed through the `::custom_view` URL parameter. For example:
+
+```txt
+http://curatorexample.com/dashboard-name?::custom_view=MyCustomViewName
+```
+
+### Sharing Private Custom Views
+
+Private Custom Views are only visible in the dropdown for the user who created them.  However, similar to
+[sharing a Custom View in Tableau](https://help.tableau.com/current/pro/desktop/en-us/customview.htm#share-a-custom-view)
+anyone with access to the Dashboard can see a Custom View using the direct link [outlined above](#how-to-share-a-custom-view-via-direct-link)
