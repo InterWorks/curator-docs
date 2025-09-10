@@ -1,9 +1,0 @@
-# IIS Installation (Unavailable)
-
-**Curator no longer supports new installations on IIS.**
-
-Instead, download the installer for [Windows](https://curator.interworks.com/page/kb/setup/installation/windows/1108).
-
-NOTE: *If you already have IIS installed, Curator's support team will continue to support your instance, but any new
-installations will require our Apache installation.  It is highly recommended that you migrate to Apache for increased
-stability.*

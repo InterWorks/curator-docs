@@ -1,0 +1,50 @@
+---
+title: 'Overview'
+description: 'An overview of the authentication methods available in Curator.'
+---
+
+import { allEmbedTypes } from '/snippets/variables.mdx';
+
+When <Tooltip tip={allEmbedTypes.join(', ')}>integrating your analytics</Tooltip> Curator relies on those source-systems
+to authorize users to see and interact with content that is embedded in Curator.  However, in order to utilize those
+systems that your content relies on Curator must be set up to authenticate users to the frontend of the site. Curator
+can use a variety of methods to authenticate users to the frontend - each method may require additional
+setup, so be sure to check out the relevant section for your established security - or reach out to our support team
+using the link at the top of the page if you have questions about choosing the right method for your organization.
+
+## Default Authentication
+
+By default, Curator is set up to "Pass Through" authentication to your embedded content, and has no Authentication or
+Authorization system in place.
+
+When users encounter embedded content, they will be prompted to log in with their own credentials, and there will be no
+menu permissions - so everyone will be able to see everything, but the source-system in question will still restrict
+access to content based on the user's permissions in that system.
+
+## Authentication Type Options
+
+If you plan to integrate any <Tooltip tip={allEmbedTypes.join(', ')}>analytic-content</Tooltip> it's wise to get that
+connection set up first.  Review the steps for [creating your integration](/creating_integrations/overview) in our
+documentation, and then come back here to set up your authentication.
+
+- [SAML](/setup/authentication/okta_saml)
+This allows user accounts to authenticate using your SAML Identity Provider (IdP), such as Okta, Azure AD, OneLogin, etc.
+
+- **Tableau Server (needs documented)**
+This allows user accounts to authenticate directly with a Tableau Server using their local Tableau Server username and password.
+
+- [Curator Users](/setup/authentication/curator_users)
+This allows users to be created and stored locally on the site. For Tableau Cloud customers you can use Curator as your
+SAML Host (IdP), in which case you would set up your Tableau Cloud site to use Curator as the SAML authenticator.
+
+- [Pass-Through (Security Disabled)](/setup/authentication/pass_through_authentication)
+This turns off authentication to the frontend and makes all links and pages public.  The user is still
+required to authenticate directly to the Tableau Server for any underlying views in a Dashboard which
+requires a login.
+
+- [Active Directory](/setup/authentication/active_directory)
+Users authenticate seamlessly with Microsoft Active Directory - not to be confused with [Azure AD](/setup/authentication/azure_ad_saml)
+which is a cloud-based service.
+
+- **OAuth/OpenID (needs documented)**
+This allows user accounts to authenticate using your OAuth provider.

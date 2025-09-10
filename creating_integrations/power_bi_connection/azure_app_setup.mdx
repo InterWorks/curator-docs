@@ -1,0 +1,56 @@
+---
+title: 'Azure App Setup'
+description: 'Step-by-step guide to set up Azure application registration for Power BI integration with Curator.'
+---
+
+## Steps
+
+1. **Azure App Setup**
+2. [Service Principal Setup](https://curator.interworks.com/page/kb/creating-integrationspower-bi-connection/service-principal-setup/1195)
+3. [Power BI Workspace Access](https://curator.interworks.com/page/kb/creating-integrationspower-bi-connection/power-bi-workspace-access/1196)
+4. [Curator Connection](https://curator.interworks.com/page/kb/creating-integrationspower-bi-connection/step-4-curator-connection/1545)
+
+## Creating an App within the Azure Portal
+
+1. Log in to the [Azure Portal](https://portal.azure.com);
+2. Search for “App Registrations” to start the process.
+3. You will need to provide a redirect URI during this process under the "Web" platform.  The redirect URI should follow
+this format:
+
+    `https://curatorexample.com/powerbi`
+4. Once the app is registered, make note of the following details from the “Overview” page as you will need them when
+setting up the configuration on Curator:
+    - Application (client) ID
+    - Directory (tenant) ID
+    - Application ID URI
+
+## API Permissions
+
+Your InterWorks Curator Azure App will need several delegated API permissions.  While still viewing the registered app,
+click on the “API permissions” link in the left navigation.  Add the following permissions:
+
+- Azure Active Directory Graph
+  - User.Read
+- Power BI Service
+  - Dashboard.Read.All
+  - Dataset.Read.All
+  - Report.Read.All
+  - Workspace.Read.All
+
+If you intend to use **persistent filters** or other functionality that tracks user state, you'll also need to add:
+
+- Power BI Service
+  - UserState.ReadWrite.All
+
+## Create a Client Secret
+
+1. While still viewing the registered app, click on "Certificates & secrets" in the left navigation.
+2. Click the button to add a new client secret.
+3. Fill in the description and adjust the expiration date as desired, and click the save button.
+4. Copy the client secret **value** and document it in a secure place.  Note: You will not be able to retrieve the value
+again once you leave this screen.
+
+## Exposing the API
+
+You may want to configure the API for this client to not prompt users for consent.  You can do so by using the
+“Expose an API” link in the left navigation of the registered app.

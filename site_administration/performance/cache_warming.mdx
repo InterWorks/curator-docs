@@ -1,0 +1,25 @@
+---
+title: 'Cache Warming'
+description: 'Configure cache warming to improve initial page load times for designated user groups through automated cache preloading.'
+---
+
+Later page load times are much quicker than the first load due to caching. The "Cache Warming" feature allows
+a group of users to have their cache warmed every hour. This improves their first page load and avoids that
+initial long wait for the page to render when logging in.
+
+## Enabling the Cache Warming Feature
+
+1. Navigate to your Curator backend > Settings > Curator > Portal Settings > Features tab.
+2. Enable the “Cache Warming” feature at the top of the Functionality section.
+3. In the "Priority Group for Cache Warming" field, choose a Frontend Group with less than 200 members. The
+options should already be limited to applicable groups. For more information about creating Frontend Groups,
+visit [the doc](https://curator.interworks.com/page/kb/users-groupsuser-management/users-and-groups-overview/1212).
+4. Hit "Save."
+
+## Notes
+
+- Every hour the members of the chosen group will have their cache warmed. This is ran every hour in case
+another process has cleared the cache such as logging out or making a configuration change.
+- The group has to contain less than 200 members because the process to warm the cache is intensive. Warming
+for more than 200 members might bog down the queue that runs scheduled processes, preventing other important
+functions to run.

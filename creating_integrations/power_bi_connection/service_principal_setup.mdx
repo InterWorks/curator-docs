@@ -1,0 +1,32 @@
+---
+title: 'Service Principal Setup'
+description: 'Configure service principal authentication and permissions for secure Power BI API access in Curator.'
+---
+
+## Steps
+
+1. [Azure App Setup](https://curator.interworks.com/page/kb/creating-integrationspower-bi-connection/azure-app-setup/1194)
+2. **Service Principal Setup**
+3. [Power BI Workspace Access](https://curator.interworks.com/page/kb/creating-integrationspower-bi-connection/power-bi-workspace-access/1196)
+4. [Curator Connection](https://curator.interworks.com/page/kb/creating-integrationspower-bi-connection/step-4-curator-connection/1545)
+
+## Create a separate Service Principal with Password (Optional)
+
+**NOTE:** In most configurations, the Azure registered app's client secret can be used as the service principal password.
+However, if that doesn't work, you may need to use the following steps to create a distinct service principal password.
+
+A service principal is needed to query your Power BI tenant to get lists of dashboards and reports, which aid in easily
+publishing those elements to Curator.  These APIs are only available to master accounts and service principals.
+A service principal is needed to avoid Multi-Factor Authentication (MFA) that may be configured with your master account.
+
+To create a service principal, you’ll need to run the following commands in PowerShell:
+
+1. `Install-Module AzureAD`
+2. `Connect-AzureAD`
+3. `$sp = New-AzureAdServicePrincipal -Display <Your Desired SP Name Here>`
+4. `New-AzureADServicePrincipalPasswordCredential -ObjectId $sp.ObjectId -Value <Your Desired SP Password Here>`
+
+_If you run into permissions errors, you may need your system administrator to run these commands._
+
+**Note:** You can also set other details, such as start and end dates,  for the service principal account and password
+by using various PowerShell command parameters.
