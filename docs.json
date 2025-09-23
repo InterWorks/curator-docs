@@ -220,7 +220,8 @@
                             {
                                 "group": "ThoughtSpot Content",
                                 "pages": [
-                                    "embedding_using_analytics/thoughtspot_content/thoughtspot_search"
+                                    "embedding_using_analytics/thoughtspot_content/thoughtspot_search",
+                                    "embedding_using_analytics/thoughtspot_content/thoughtspot_full_app"
                                 ]
                             }
                         ]

@@ -1,0 +1,46 @@
+---
+title: 'ThoughtSpot Full App Embed'
+description: 'Embed the complete ThoughtSpot application experience within Curator using the Page Builder.'
+---
+
+import { BackendNavPath } from '/snippets/backend_nav_path.mdx';
+
+If you have [integrated ThoughtSpot](
+    /creating_integrations/thoughtspot_connection/integrating_thoughtspot_with_curator
+), you can follow this guide to add a ThoughtSpot Full App Embed to Curator.
+
+## Creating the ThoughtSpot Full App Embed
+
+The ThoughtSpot Full App Embed is available directly in the Page Builder, allowing you to embed the complete
+ ThoughtSpot application experience within your Curator pages.
+
+1. <BackendNavPath
+    levelOne="Content"
+    levelTwo="Pages"
+    /> Find the page you'd like to add your embed to, or create a new page.
+2. In the Page Builder, select an existing element from the preview and click the "Change Element" button. You can also
+ add a new element.
+3. Choose the "Analytic Elements" category then the "THOUGHTSPOT FULL APP" element.
+![Full app modal element](/docs_assets/images/thoughtspot/full_app_embed_pb.png)
+4. Once the element is added, choose the Org where your ThoughtSpot data lives from the left-hand panel:
+![Import SAML metadata](/docs_assets/images/thoughtspot/full_app_embed_page_builder_org_dropdown.png)
+5. Finally choose the Homepage experience you'd like to use:
+    ![Search bar dropdown](/docs_assets/images/thoughtspot/full_app_embed_page_builder_search_bar_dropdown.png)
+    - **Classic Homepage** (default) - The traditional ThoughtSpot homepage experience
+        ![Classic homepage embed](/docs_assets/images/thoughtspot/full_app_embed_classic.png)
+    - **Spotter Homepage** - ThoughtSpot's new natural language search interface
+        ![Spotter Homepage embed](/docs_assets/images/thoughtspot/full_app_embed_spotter.png)
+
+## Adding the ThoughtSpot Full App Embed to the Curator Frontend
+
+Once configured in the Page Builder, the ThoughtSpot Full App Embed will be displayed on your page, providing users
+ with access to the complete ThoughtSpot application interface. Users will need appropriate ThoughtSpot permissions
+  on the configured Org to access the embedded application.
+
+You can make the page containing the Full App Embed more discoverable by:
+
+1. Adding it to your [navigation](/site_content_design/menus/managing_menus).
+2. Creating a [tile](/site_content_design/pages/Tiles) that links to the page.
+3. Adding keywords to the page so it can be easily found via Curator's search or in the [explorer](
+    /site_content_design/pages/Explorer
+).
