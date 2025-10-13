@@ -382,6 +382,7 @@
                     {
                         "group": "Site Administration",
                         "pages": [
+                            "site_administration/accessing_the_backend",
                             {
                                 "group": "Admin Email Notifications",
                                 "pages": [
@@ -419,13 +420,8 @@
                             {
                                 "group": "Backend Administrators",
                                 "pages": [
-                                    {
-                                        "group": "Backend Administrators",
-                                        "pages": [
-                                            "site_administration/backend_administrators/password_reset",
-                                            "site_administration/backend_administrators/overview"
-                                        ]
-                                    }
+                                    "site_administration/backend_administrators/overview",
+                                    "site_administration/backend_administrators/password_reset"
                                 ]
                             },
                             {
