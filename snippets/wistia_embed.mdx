@@ -1,0 +1,12 @@
+export const WistiaEmbed = ({ src, title }) => {
+  return (
+    <iframe
+    className="w-full aspect-video"
+    src={src}
+    style={{ aspectRatio: 16/10 }}
+    title={title}
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+    ></iframe>
+  )
+}
