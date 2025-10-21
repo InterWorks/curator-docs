@@ -1,8 +1,8 @@
 ### Credentials
 
-The installer will generate credentials for use during installation and will store them in a file at
-`/var/www/curator_info.txt`. You will need these credentials to complete the installation and to log in to the Curator
-backend after installation.
+The installer will generate credentials for use during installation and will store them in a file in the installation
+directory (Default: `/var/www/curator_info.txt` or `C:\InterWorks\Curator\curator_info.txt` in Windows). You will need
+these credentials to complete the installation and to log in to the Curator backend after installation.
 
 ### License Key
 
@@ -12,7 +12,7 @@ Enter your license key when prompted. If you do not have a license key, please c
 
 ### Database Connection
 
-You may be prompted to enter your database connection information if the installer is unable to automatically create a
+You may be prompted to enter your database connection information if the installer is unable to automatically find the
 database for you.
 
 ![Database credentials prompt page](/assets/images/snippets/enter_database_credentials.png)
@@ -23,5 +23,6 @@ If the installation is successful, you will be redirected to your new Curator ho
 
 ![Database credentials prompt page](/assets/images/snippets/post_install_homepage.png)
 
-Using the same auto-generated credentials created in the install script above, you can log into the Curator backend at
-accessed from `http://curatorexample.com/backend`.
+Using the same auto-generated credentials created in the install script above, you can log into the Curator backend which
+can be accessed from `http://curatorexample.com/backend`. If you're on the server you installed, you may also use localhost.
+Keep in mind this may be an IP address or computer name until your IT team sets up DNS.
