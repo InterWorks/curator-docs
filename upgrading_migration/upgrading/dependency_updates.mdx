@@ -3,10 +3,26 @@ title: 'Dependency Updates'
 description: 'Instructions for updating PHP, Apache, or MariaDB dependencies on your Curator webserver.'
 ---
 
-Need to update PHP, Apache, or MariaDB on your webserver?
-Curator's upstream dependencies need to be upgraded every so often as well!
+Curator's upstream dependencies (PHP, Apache, and MariaDB) require periodic updates to maintain security, performance,
+ and compatibility with the latest Curator features.
 
 *Note: Before upgrading any dependencies, it is a good idea to ensure that you have a recent Curator backup available.*
+
+## PHP Dependencies by Curator Version
+
+| Curator Version | Minimum PHP Version | Maximum PHP Version |
+|-----------------|-------------------|-------------------|
+| 2023.03.01      | 8.0              | 8.0              |
+| 2024.10.04      | 8.0              | 8.1              |
+| 2025.07-03      | 8.0              | 8.3              |
+| 2025.09-03      | 8.1              | 8.3              |
+| 2026.04-01      | 8.3              | 8.3              |
+
+### Important Notes
+
+- Always ensure your PHP environment meets or exceeds the minimum version requirement for your Curator installation.
+- Upgrading Curator may require upgrading your PHP version.
+- Check your current PHP version with `php --version`.
 
 ## Windows
 
