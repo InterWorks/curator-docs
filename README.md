@@ -1,5 +1,5 @@
 # Core Documentation
 
-Documentation automatically deployed from GitLab release 2025.11-01-rc.2
+Documentation automatically deployed from GitLab release 2025.11-01
 
-Last updated: 2025-11-04 18:57:11 UTC
+Last updated: 2025-11-06 21:36:45 UTC
