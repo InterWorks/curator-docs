@@ -173,6 +173,17 @@
                                 ]
                             },
                             {
+                                "group": "Power BI",
+                                "pages": [
+                                    {
+                                        "group": "Power BI Reports",
+                                        "pages": [
+                                            "embedding_using_analytics/power_bi_reports/adding_a_power_bi_report"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
                                 "group": "ThoughtSpot",
                                 "pages": [
                                     "embedding_using_analytics/thoughtspot_content/thoughtspot_search",

@@ -39,11 +39,34 @@ PHP and Apache will be upgraded automatically by this utility.
 
 **Note: Internet access is required for this process. Systems without internet access will need to upgrade manually.**
 
-To manually upgrade PHP, Apache, or MariaDB, download these utilities using the following links:
+### Manual Dependency Updates
 
-1. [PHP](https://api.curator.interworks.com/file/php_apache)
-2. [Apache](https://api.curator.interworks.com/file/apache)
-3. [MariaDB](https://api.curator.interworks.com/file/mariadb)
+If your server has restrictions that prevent the utility from downloading files automatically, you can manually download
+the required files and run the upgrade utility locally.
+
+To manually upgrade dependencies:
+
+1. Download the **[Curator Dependency Update Utility](https://portals.interworks.com/Curator_PHP_Upgrade_Util.exe)** on
+   a system with internet access.
+
+2. Download the following files to the same directory as the utility.
+   <Warning>File names must match exactly as shown below for the utility to recognize them.</Warning>
+   - **vc_redist.exe** - VC Redistributables: [https://api.curator.interworks.com/file/vc_redist](https://api.curator.interworks.com/file/vc_redist)
+   - **php.zip** - PHP package: [https://api.curator.interworks.com/file/php_apache](https://api.curator.interworks.com/file/php_apache)
+   - **apache.zip** - Apache updates: [https://api.curator.interworks.com/file/apache](https://api.curator.interworks.com/file/apache)
+
+3. Transfer all files (the utility and the three downloaded files) to your Curator server.
+
+4. Ensure all five files are in the same directory, such as having them all on your Desktop,
+then double-click the utility to run the upgrade.
+
+*Note: The utility will detect the locally available files and use them instead of attempting to download them. If the
+file names do not match exactly, the utility will not recognize them and will attempt to download them from the internet.*
+
+### Manual MariaDB Updates
+
+To manually upgrade MariaDB, download the [MariaDB package](https://api.curator.interworks.com/file/mariadb) using
+the link below.
 
 *Note:* To upgrade MariaDB, you will need your root database password.
 If you do not know this password, check your installation directory for an *Curator.txt* file, which contains
