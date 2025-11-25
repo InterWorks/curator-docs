@@ -161,7 +161,8 @@
                                             "embedding_using_analytics/tableau_dashboards/download_workbook",
                                             "embedding_using_analytics/tableau_dashboards/pause_and_resume_changes",
                                             "embedding_using_analytics/tableau_dashboards/url_action_overrides_link_target",
-                                            "embedding_using_analytics/tableau_dashboards/dashboard_settings"
+                                            "embedding_using_analytics/tableau_dashboards/dashboard_settings",
+                                            "embedding_using_analytics/tableau_dashboards/chrome_edge_embedding_issues"
                                         ]
                                     },
                                     {
@@ -370,20 +371,9 @@
                             {
                                 "group": "Performance",
                                 "pages": [
-                                    {
-                                        "group": "Performance",
-                                        "pages": [
-                                            "site_administration/performance/cache_warming",
-                                            "site_administration/performance/troubleshooting_load_times"
-                                        ]
-                                    },
-                                    {
-                                        "group": "Performance",
-                                        "pages": [
-                                            "site_administration/performance/troubleshooting_load_times",
-                                            "site_administration/performance/cache_warming"
-                                        ]
-                                    }
+                                    "site_administration/performance/troubleshooting_load_times",
+                                    "site_administration/performance/performance_diagnostics",
+                                    "site_administration/performance/cache_warming"
                                 ]
                             },
                             "site_administration/standards_compliance/web_accessibility"

@@ -32,8 +32,25 @@ has been set up properly.
 
 After this you can create users normally, and when they visit the backend of Curator they will be redirected
 to log in via SAML, then re-routed to the backend.
-*Note:* You will need to create backend users as normal following the steps above (including a password)
+*Note:* You can create backend users as normal following the steps above (including a password)
 however users will not be able to log in via these credentials due to *Force Backend Users to Login Via
 Frontend Authentication Forms* being enabled.
 Only backend usernames matching frontend usernames will be able to access Curator's administrative interface.
 Compare the two by checking the Frontend User section and Backend User section.
+
+### Using Frontend Users as Backend Users
+
+Curator can use the same Portal Settings as SAML to allow Frontend Users to login to the backend as well.
+This will restrict backend users who don't have a corresponding frontend user.
+In order for this to work, set up your environment following the steps below:
+
+1. Ensure your chosen Authentication Type is set up properly, and sign in with a frontend user of your choice.
+2. Create a backend user with account info that matches the frontend user you just used.
+3. Sign out of both the frontend and the backend.
+4. Login to only the frontend with the corresponding account.
+5. Go to the backend of your Curator instance (e.g. `http://curatorexample.com/backend`).
+6. It should sign you in automatically.  You should then enable *Force Backend Users to Login Via
+Frontend Authentication Forms*.
+7. This should enable frontend users to sign into the backend automatically with the same account.
+*Note:* In order to access the backend, a given frontend user will have to have a backend account manually made
+by an existing backend user.
