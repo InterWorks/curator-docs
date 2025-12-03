@@ -262,6 +262,17 @@ After restarting, try accessing the Tableau views in Curator again. They should 
 
 ---
 
+## Consider switching to Connected Apps
+
+If your Curator system is currently using **Tableau Default** or **Trusted Tickets** for Tableau authentication,
+switching to **Connected Apps** may resolve embedding issues related to Local Network Access restrictions.
+
+These authentication methods often involve additional redirects and local network interactions that can trigger LNA
+restrictions in Chrome 142+ and Edge 143+. Connected Apps use a more streamlined authentication flow that is less
+likely to be affected by these browser security features.
+
+---
+
 ## Additional vendor-specific guidance
 
 If you've identified which security tool is causing the issue, these vendor guides may help your IT team configure
