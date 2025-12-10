@@ -160,8 +160,8 @@ The mobile menu is triggered under the default settings when the browser window 
   ![image.png](/Screenshot2025-12-04002839.png)
 - \*\*Subnav Text Color \*\*- Sets the text color for toolbar subnavigation items. Default is Black. Color is set to default in example image above.
 - \*\*Action Button Color \*\*- Controls the color of Action Buttons and text/titles on the toolbar. Default is black. Color is set to black in the example image above.
-- **Accent Color** - The accent color applies to elements in Custom Views, Dashboard Export, Report Builder, Tutorials, Org Charts, Explorer Elements, Favorites, Dashboard commenting, Scorecard, and New and Updated flags. It is recommended to use a distinct color (not white or black) to indicate users are able to click on these elements to perform an action. The default color is black.
-- **Accent Text Color** - Sets the text color for accent-button elements. The background color of these elements is generally controlled by **Accent Color**. Ensure that the Accent Color and Accent Text Color have sufficient contrast to make the text visible. The default color is black.
+- **Accent Color** - The accent color applies to elements in Custom Views, Dashboard Export, Report Builder, Tutorials, Org Charts, Explorer Elements, Favorites, Dashboard commenting, Scorecard, and New and Updated flags. It is recommended to use a distinct color (not white or black) to indicate users are able to click on these elements to perform an action. The accent color also applies to buttons within the toolbar for Dashboards. The default color is white.
+- **Accent Text Color** - Sets the text color for accent-button elements. The background color of these elements is generally controlled by **Accent Color**. Ensure that the Accent Color and Accent Text Color have sufficient contrast to make the text visible. The accent text color also applies to buttons within the toolbar for Dashboards. The default color is black.
 
 ### Toolbar Mobile Settings
 
@@ -187,10 +187,37 @@ This section allows you to set default colors, styles, and options for tiles, tu
 
 **Thumbnail Tile Style** - Sets the default shape of tile elements across the Curator portal. Options are Default, Square, Landsacpe, Boxy, and Hex. Default is Square. Note - The default tile style can be overridden on an element-by-element basis in the Edit Page section of the backend. more information. More information can be found in the [Tiles](https://docs.curator.interworks.com/site_content_design/pages/tiles) section.
 
-**Tile Text Color **- Controls the color of Text below tiles across Curator. The default is black.
+\*\*Tile Text Color \*\*- Controls the color of Text below tiles across Curator. The default is black.
 
 **Button Shape** - Sets the default shape for buttons in your portal. Options are default, square, rounded, pill, and ovel. Default is Square.
 
 \*\*Hyperlink Color \*\*- Controls the hyperlink text color inside buttons. The default is black.
 
-Tile Styles
+### Tile Styles
+
+- **Tile Background Color** - Controls the background color for tiles. Default is white.
+- **Tile Overlay **- Gives the ability to add a description or action buttons on hover for tiles. If the "Show Tile Description" control is set to 'On Hover,' the Action button option will not be shown. The default setting is None. 
+- **Show Tile Description** - Shows Description for tiles - description will only show for content that has a description added. Options are Default, Do Not Show, On Hover, and Below Tile. Default is to show the description on Hover. 
+- **Show Tile Title** - Controls the default setting for showing Tile titles across Curator. Options are Default, Show, and Hide. Default setting is to show titles. 
+- **Custom Default Thumbnail **- Enables you to add a custom 'default' thumbnail for tiles where a thumbnail is not set within the content itself. If a file is not uploaded here, Curator will use its own default thumbnail for content where there is not a custom thumbnail, or when dashboard thumbnails cannot be retrieved. 
+
+### Tutorial Styles
+
+- **Tutorial Title Text Color** - Controls the Color of the Title Text for Tutorials
+
+  ![image.png](/images/image.png)
+
+### Button Options
+
+- **Primary Buttons** - Submit buttons on forms, Close/Close and Do Not Show Again Buttons on Tutorials, Button elements on pages set to "Primary" under the Button Settings section will use these color settings. 
+  - **Primary Button Color** - Sets background color for primary buttons across the Curator portal. The Default setting is White.
+  - **Primary Button Text Color **- Sets the text color for primary buttons across the Curator portal. The Default setting is Black.
+  - **Primary Button Border Color** - Sets border color for primary buttons across the Curator portal. The Default setting is Black. 
+- **Secondary Buttons **- Button Elements on Pages set to "Secondary" under the Button Settings section will use these settings
+  - **Secondary Button Color** - Sets background color for secondary buttons across the Curator portal. The Default setting is Black.
+  - **Secondary Button Text Color **- Sets the text color for secondary buttons across the Curator portal. The Default setting is White. 
+  - Secondary Button Border Color - Sets border color for secondary buttons across the Curator portal. The Default setting is Black.
+- **Cancel Buttons** - Clear and Cancel buttons on forms
+  - **Cancel Button Color **- Sets background color for Cancel buttons across the Curator portal. The Default setting is White.
+  - **Cancel Button Text Color** - Sets the text color for cancel buttons across the Curator portal. The Default setting is Black.
+  - **Cancel Button Border Color** - Sets border color for cancel buttons across the Curator portal. The Default setting is Black.
